@@ -9,13 +9,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Flutter Demo",
-      home: HomeWidget(),
+      home: HomePage(),
     );
   }
 }
 
-class HomeWidget extends StatelessWidget {
-  const HomeWidget({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,7 @@ class HomeWidget extends StatelessWidget {
       appBar: AppBar(
         title: const Text("First App"),
       ),
+      body: Center(child: const Text("This is Content on Center of Screen")),
     );
   }
 }
