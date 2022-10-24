@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_beginner/pages/first_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -29,26 +30,6 @@ class HomePage extends StatelessWidget {
           children: [
             const Text("This is Content on Center of Screen"),
             const Text("this is second text. using column"),
-            ElevatedButton(onPressed: () {}, child: Text("Button"))
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("First Page")),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("This is First Page."),
             ElevatedButton(onPressed: () {}, child: Text("Button"))
           ],
         ),
