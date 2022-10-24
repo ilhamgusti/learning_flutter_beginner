@@ -23,7 +23,15 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("First App"),
       ),
-      body: Center(child: const Text("This is Content on Center of Screen")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("This is Content on Center of Screen"),
+            const Text("this is second text. using column")
+          ],
+        ),
+      ),
     );
   }
 }
