@@ -28,7 +28,8 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("This is Content on Center of Screen"),
-            const Text("this is second text. using column")
+            const Text("this is second text. using column"),
+            ElevatedButton(onPressed: () {}, child: Text("Button"))
           ],
         ),
       ),
