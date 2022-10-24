@@ -30,7 +30,12 @@ class HomePage extends StatelessWidget {
           children: [
             const Text("This is Content on Center of Screen"),
             const Text("this is second text. using column"),
-            ElevatedButton(onPressed: () {}, child: Text("Button"))
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => FirstPage()));
+                },
+                child: Text("Go To First Page"))
           ],
         ),
       ),
