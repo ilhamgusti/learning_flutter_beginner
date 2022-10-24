@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_beginner/main.dart';
+import 'package:learning_flutter_beginner/pages/third_page.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
@@ -13,15 +15,33 @@ class SecondPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("This is Second Page."),
-            ElevatedButton(
+            ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ThirdPage(),
+                      ));
+                },
+                icon: Icon(Icons.chevron_right),
+                label: Text("Third Page")),
+            ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => HomePage(),
                       ));
                 },
-                child: Text("Go To Home Page"))
+                icon: Icon(CupertinoIcons.home),
+                label: Text("Home Page")),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.chevron_left),
+              label: Text("Previous Page"),
+            )
           ],
         ),
       ),
