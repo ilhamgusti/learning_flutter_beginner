@@ -13,7 +13,15 @@ class SecondPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("This is Second Page."),
-            ElevatedButton(onPressed: () {}, child: Text("Go To Home Page"))
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(),
+                      ));
+                },
+                child: Text("Go To Home Page"))
           ],
         ),
       ),
