@@ -7,6 +7,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const MaterialApp(
+      title: "Flutter Demo",
+      home: HomeWidget(),
+    );
+  }
+}
+
+class HomeWidget extends StatelessWidget {
+  const HomeWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("First App"),
+      ),
+    );
   }
 }
